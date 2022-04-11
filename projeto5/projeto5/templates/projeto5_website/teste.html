@@ -3,11 +3,22 @@
 
   <form method="post">
     {% csrf_token %}
-    <input id="ra" type="text" placeholder="Digite seu RA" name="ra">
-    <br>
-    <input id="name" type="text" placeholder="Nome Completo" name="nome">
-    <br>
-    <input id="email" type="text" placeholder="Digite seu Email" name="email">
+
+    <div class="row">
+      <div class="col-md-2">
+        <input id="ra" type="text" class="form-control" placeholder="Digite seu RA" name="ra" >
+      </div>
+      <div class="col-md-6">
+        <input id="name" name="nome" type="text" class="form-control" placeholder="Nome Completo" aria-label="Username" aria-describedby="basic-addon1">
+    
+      </div>
+    </div>
+    <br>  
+  <div class="row">
+   <div class="col-md-8">
+      <input name="email" type="email" class="form-control" id="e-mail" placeholder="Digite seu Email">
+    </div>
+  </div>
 
     {% for pergunta,alternativas in perguntas.items %}
       <h3>{{pergunta}}</h3>
