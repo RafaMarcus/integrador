@@ -1,0 +1,26 @@
+{% extends "projeto5_website/base.html" %}
+{% block content %}   
+<table class="table table-striped">
+    <thead>
+       <tr>
+       <th scope="col">Nome</th>
+       <th scope="col">Dominancia</th>
+       <th scope="col">Influencia</th>
+       <th scope="col">Cautela</th>
+       <th scope="col">Estabilidade</th>
+       </tr>
+    </thead>
+    <tbody>
+    {% for resultado in resultados %}
+        <tr>
+            <td>{{ resultado.aluno.nome }}</td>
+            <td>{{ resultado.dominancia }}</td>
+            <td>{{ resultado.influencia }}</td>
+            <td>{{ resultado.cautela }}</td>
+            <td>{{ resultado.estabilidade }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

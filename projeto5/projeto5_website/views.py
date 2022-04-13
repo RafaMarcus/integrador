@@ -71,3 +71,12 @@ def teste(request, teste):
     print(respostas_dict)
     return render(request, "projeto5_website/teste.html",
               {"perguntas": perguntas_dict})
+    
+def resultados(request):
+  # respostas_dict = {}
+  # if request.method == 'GET':
+  #   for resposta in Resultado.objects():
+  #     respostas_dict[resposta] = Alternativa.objects.filter(pergunta=pergunta)
+
+  return render(request, "projeto5_website/resultados.html",
+            {"resultados": Resultado.objects.all()})
