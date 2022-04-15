@@ -13,11 +13,11 @@
     <tbody>
     {% for resultado in resultados %}
         <tr>
-            <td>{{ resultado.aluno.nome }}</td>
-            <td>{{ resultado.dominancia }}</td>
-            <td>{{ resultado.influencia }}</td>
-            <td>{{ resultado.cautela }}</td>
-            <td>{{ resultado.estabilidade }}</td>
+            <td>{{ resultado.aluno.nome}}  </td>
+            <td>{{ resultado.dominancia|floatformat:1 }}%</td>
+            <td>{{ resultado.influencia|floatformat:1 }}%</td>
+            <td>{{ resultado.cautela|floatformat:1 }}%</td>
+            <td>{{ resultado.estabilidade|floatformat:1 }}%</td>
         </tr>
     {% endfor %}
     </tbody>

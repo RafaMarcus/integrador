@@ -152,7 +152,7 @@
       "pk": 1,
       "fields": {
         "teste": 1,
-        "enunciado": "QuestÒo 1"
+        "enunciado": "Questão 1"
       }
     },
     {
@@ -160,7 +160,7 @@
       "pk": 2,
       "fields": {
         "teste": 1,
-        "enunciado": "QuestÒo 2"
+        "enunciado": "Questão 2"
       }
     },
     {
@@ -168,7 +168,7 @@
       "pk": 3,
       "fields": {
         "teste": 1,
-        "enunciado": "QuestÒo 3"
+        "enunciado": "Questão 3"
       }
     },
     {
@@ -176,7 +176,7 @@
       "pk": 4,
       "fields": {
         "teste": 1,
-        "enunciado": "QuestÒo 4"
+        "enunciado": "Questão 4"
       }
     },
     {
@@ -184,7 +184,7 @@
       "pk": 5,
       "fields": {
         "teste": 1,
-        "enunciado": "QuestÒo 5"
+        "enunciado": "Questão 5"
       }
     },
     {
@@ -192,7 +192,7 @@
       "pk": 6,
       "fields": {
         "teste": 1,
-        "enunciado": "QuestÒo 6"
+        "enunciado": "Questão 6"
       }
     },
     {
@@ -200,7 +200,7 @@
       "pk": 1,
       "fields": {
         "pergunta": 1,
-        "conteudo": "amßvel, gentil",
+        "conteudo": "amável, gentil",
         "perfil": 2
       }
     },
@@ -254,7 +254,7 @@
       "pk": 7,
       "fields": {
         "pergunta": 2,
-        "conteudo": "cooperativo, estß de acordo com  frequÛncia",
+        "conteudo": "cooperativo, está de acordo com  frequência",
         "perfil": 4
       }
     },
@@ -263,7 +263,7 @@
       "pk": 8,
       "fields": {
         "pergunta": 2,
-        "conteudo": "atrativo, simpßtico, agradßvel",
+        "conteudo": "atrativo, simpático, agradável",
         "perfil": 3
       }
     },
@@ -272,7 +272,7 @@
       "pk": 9,
       "fields": {
         "pergunta": 3,
-        "conteudo": "fßcil de guiar, seguidor",
+        "conteudo": "fácil de guiar, seguidor",
         "perfil": 2
       }
     },
@@ -326,7 +326,7 @@
       "pk": 15,
       "fields": {
         "pergunta": 4,
-        "conteudo": "voluntarioso, carßter forte e decidido",
+        "conteudo": "voluntarioso, caráter forte e decidido",
         "perfil": 1
       }
     },
@@ -371,7 +371,7 @@
       "pk": 20,
       "fields": {
         "pergunta": 5,
-        "conteudo": "estßvel, de temperamento tranquilo, calmo",
+        "conteudo": "estável, de temperamento tranquilo, calmo",
         "perfil": 2
       }
     },

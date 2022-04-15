@@ -48,7 +48,7 @@ def teste(request, teste):
         totalRespostas += 1
 
     for chave, conteudo in respostas_dict.items():
-      respostas_dict[chave] = respostas_dict[chave] / totalRespostas
+      respostas_dict[chave] = (respostas_dict[chave] / totalRespostas) * 100
 
     try:
       aluno = Aluno.objects.get(ra=ra)
