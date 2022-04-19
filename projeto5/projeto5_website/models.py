@@ -9,7 +9,7 @@ class Turma(models.Model):
 
 
 class Aluno(models.Model):
-  nome = models.CharField(max_length=30)
+  nome = models.CharField(max_length=50)
   ra = models.IntegerField(unique=True, blank=False)
   email = models.EmailField(max_length=254, blank=False)
   #turma = models.ManyToManyField(Turma)
@@ -31,7 +31,7 @@ class Resultado(models.Model):
 
 
 class Teste(models.Model):
-  nome = models.CharField(max_length=30)
+  nome = models.CharField(max_length=50)
 
   def __str__(self):
     return self.nome
@@ -51,7 +51,7 @@ CHOICES_ALTERNATIVA = (
 )
 class Alternativa(models.Model):
   pergunta = models.ForeignKey(Pergunta, on_delete=models.CASCADE)
-  conteudo = models.CharField(max_length=30, blank=False)
+  conteudo = models.CharField(max_length=50, blank=False)
   perfil = models.IntegerField(choices=CHOICES_ALTERNATIVA, blank=False)
   
   def __str__(self):

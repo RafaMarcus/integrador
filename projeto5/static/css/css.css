@@ -31,3 +31,18 @@ img{
 .form-check{
     size: 50px;
 }
+
+h3{
+color: #EB0045;
+}
+
+#result_wrapper{
+    margin-top: 25px;
+}
+
+td:first-child + td + td + td + td + td { 
+     width: 10px;
+     text-align: center;
+     vertical-align: middle;
+}
+
