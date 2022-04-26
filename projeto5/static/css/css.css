@@ -1,9 +1,33 @@
-body{
+form{
 background-color: #243746;
-color: aliceblue;
+color: rgb(255, 255, 255);
+padding-left: 250px;
 }
 
 #enviar{
     background-color: #EA0D43;
     border-color: #EA0D43;
+    margin-bottom: 50px;
+    width: 50%;
+}
+
+#cabecalho{
+    background-color: #243746;
+    padding-bottom: 30px;
+}
+
+img{
+    margin-left: 33%;
+}
+
+#cabform{
+    padding-bottom: 25px;
+}
+
+#pergunta{
+    padding-bottom: 25px;
+}
+
+.form-check{
+    size: 50px;
 }

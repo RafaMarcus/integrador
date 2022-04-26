@@ -3,7 +3,7 @@
 
   <form method="post">
     {% csrf_token %}
-
+    <div id='cabform'>
     <div class="row">
       <div class="col-md-2">
         <input id="ra" type="text" class="form-control" placeholder="Digite seu RA" name="ra" >
@@ -12,15 +12,19 @@
         <input id="name" name="nome" type="text" class="form-control" placeholder="Nome Completo" aria-label="Username" aria-describedby="basic-addon1">
     
       </div>
-    </div>
+      </div>
+    
     <br>  
   <div class="row">
    <div class="col-md-8">
       <input name="email" type="email" class="form-control" id="e-mail" placeholder="Digite seu Email">
     </div>
   </div>
-
+  </div>
+ 
+    
     {% for pergunta,alternativas in perguntas.items %}
+    <div id="pergunta">
       <h3>{{pergunta}}</h3>
       <fieldset>
         {% for alternativa in alternativas %}
@@ -33,7 +37,9 @@
        
         {% endfor %}
       </fieldset>
+    </div>
     {% endfor %}
+     
     <button id="enviar" class="btn btn-primary"  type="submit ">Enviar</button>
 
     

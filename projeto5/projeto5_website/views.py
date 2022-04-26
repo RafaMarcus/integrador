@@ -48,7 +48,7 @@ def teste(request, teste):
         totalRespostas += 1
 
     for chave, conteudo in respostas_dict.items():
-      respostas_dict[chave] = respostas_dict[chave] / totalRespostas
+      respostas_dict[chave] = (respostas_dict[chave] / totalRespostas) * 100
 
     try:
       aluno = Aluno.objects.get(ra=ra)
@@ -71,3 +71,16 @@ def teste(request, teste):
     print(respostas_dict)
     return render(request, "projeto5_website/teste.html",
               {"perguntas": perguntas_dict})
+    
+def resultados(request):
+  # respostas_dict = {}
+  # if request.method == 'GET':
+  #   for resposta in Resultado.objects():
+  #     respostas_dict[resposta] = Alternativa.objects.filter(pergunta=pergunta)
+
+  return render(request, "projeto5_website/resultados.html",
+            {"resultados": Resultado.objects.all()})
+
+def obrigado(request):
+  return render(request, "projeto5_website/obrigado.html",
+            {"resultados": Resultado.objects.all()})
