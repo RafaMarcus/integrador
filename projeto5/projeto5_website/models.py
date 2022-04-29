@@ -26,6 +26,7 @@ class Resultado(models.Model):
   dominancia = models.FloatField()
   cautela = models.FloatField()
   estabilidade = models.FloatField()
+  perfildominante = models.CharField(max_length=50, default="")
 
   def __str__(self):
     return ' - '.join([str(self.aluno.ra),self.data_fim.isoformat()])

@@ -44,12 +44,6 @@ color: #EB0045;
     margin-top: 25px;
 }
 
-td:first-child + td + td + td + td + td { 
-     width: 10px;
-     text-align: center;
-     vertical-align: middle;
-}
-
 P{
     font-size: medium;
 }
@@ -66,4 +60,9 @@ P{
 
 #empregado{
     margin-top: -15px;
+}
+
+#resulpredomi{
+   text-transform:capitalize;
+   font-weight: bold
 }
