@@ -20,6 +20,10 @@ img{
     margin-left: 33%;
 }
 
+h4{
+    margin-left: 33%;
+}
+
 #cabform{
     padding-bottom: 25px;
 }
@@ -46,3 +50,20 @@ td:first-child + td + td + td + td + td {
      vertical-align: middle;
 }
 
+P{
+    font-size: medium;
+}
+
+#enun{
+    border-color: #EB0045;
+    border-style:groove;
+    margin-top: 30px;
+}
+
+#emprego{
+    margin-top:25px
+}
+
+#empregado{
+    margin-top: -15px;
+}

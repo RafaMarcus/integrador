@@ -12,6 +12,7 @@ class Aluno(models.Model):
   nome = models.CharField(max_length=50)
   ra = models.IntegerField(unique=True, blank=False)
   email = models.EmailField(max_length=254, blank=False)
+  empregado = models.BooleanField(default=False)
   #turma = models.ManyToManyField(Turma)
   def __str__(self):
     return str(self.ra)
