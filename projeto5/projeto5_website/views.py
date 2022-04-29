@@ -1,3 +1,5 @@
+import operator
+from turtle import title
 from django.shortcuts import render
 from projeto5_website.models import Pergunta, Alternativa, Aluno, CHOICES_ALTERNATIVA, Resultado
 from django.http import HttpResponse, HttpResponseRedirect
@@ -51,7 +53,7 @@ def teste(request, teste):
 
     for chave, conteudo in respostas_dict.items():
       respostas_dict[chave] = (respostas_dict[chave] / totalRespostas) * 100
-
+      
     try:
       aluno = Aluno.objects.get(ra=ra)
     
@@ -66,12 +68,21 @@ def teste(request, teste):
     resultado = Resultado()
     for choice, nome in CHOICES_ALTERNATIVA:
       setattr(resultado, nome, respostas_dict[str(choice)])
+      
+    max_key = max(respostas_dict.items(), key=operator.itemgetter(1))[0]
+    
+    for choice, nome in CHOICES_ALTERNATIVA:
+        if max_key == str(choice):
+          resultado.perfildominante = nome
+        else:
+          continue
     
     resultado.data_fim = resultado.data_ini = datetime.now()
     resultado.aluno = aluno
     resultado.save()
 
     print(respostas_dict)
+    print(resultado.perfildominante)
     return render(request, "projeto5_website/teste.html",
               {"perguntas": perguntas_dict})
     
