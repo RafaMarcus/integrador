@@ -41,9 +41,11 @@ def teste(request, teste):
     ra = request.POST['ra']
     email = request.POST['email']
     nome =  request.POST['nome']
+    empregado = 'empregadoOpcao' in request.POST
+      
     print (request.POST)
     for chave, conteudo in request.POST.items():
-      if chave not in ['csrfmiddlewaretoken','ra','email','nome']:
+      if chave not in ['csrfmiddlewaretoken','ra','email','nome','empregadoOpcao']:
         respostas_dict[conteudo[0]] += 1
         totalRespostas += 1
 
@@ -58,6 +60,7 @@ def teste(request, teste):
       aluno.ra = ra
       aluno.email = email
       aluno.nome = nome
+      aluno.empregado = empregado
       aluno.save()
 
     resultado = Resultado()
