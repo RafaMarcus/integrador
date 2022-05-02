@@ -10,7 +10,7 @@ from datetime import datetime
 
 
 def home(request):
-  return render(request, "projeto5_website/home.html", 
+  return render(request, "projeto5_website/teste/1.html", 
         {"perguntas": Pergunta.objects.all()})
 
 def pergunta_form(request):
@@ -22,6 +22,7 @@ def pergunta_form(request):
   else:
     form = PerguntaForm()
   return render(request, "projeto5_website/pergunta_form.html", {'form': form})
+
 
 def teste(request, teste):
   #TODO: Criar um dicionario de perguntas/alternativas
@@ -68,9 +69,12 @@ def teste(request, teste):
     resultado = Resultado()
     for choice, nome in CHOICES_ALTERNATIVA:
       setattr(resultado, nome, respostas_dict[str(choice)])
-      
+    
+    #pega o maior valor do dicionario de respostas e armazena na variável
     max_key = max(respostas_dict.items(), key=operator.itemgetter(1))[0]
     
+    #laço de repetição para comparar a maior porcentagem das respostas com os valores da CHOICES_ALTERNATIVAS,
+    #dessa forma será atribuido na variável o perfil predominante.
     for choice, nome in CHOICES_ALTERNATIVA:
         if max_key == str(choice):
           resultado.perfildominante = nome

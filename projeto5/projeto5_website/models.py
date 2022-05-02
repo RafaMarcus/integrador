@@ -45,6 +45,7 @@ class Pergunta(models.Model):
   def __str__(self):
     return self.enunciado
 
+#Perfis para incluir em cada alternativa
 CHOICES_ALTERNATIVA = (
   (1,'dominancia'),
   (2,'influencia'),
