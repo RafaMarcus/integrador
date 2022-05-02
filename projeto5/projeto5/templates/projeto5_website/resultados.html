@@ -1,13 +1,14 @@
 {% extends "projeto5_website/base.html" %}
 {% block content %}   
-<table class="table table-striped">
+<table id="result" class="table table-striped table-hover table-bordered table-striped">
     <thead>
        <tr>
        <th scope="col">Nome</th>
-       <th scope="col">Dominancia</th>
-       <th scope="col">Influencia</th>
+       <th scope="col">Dominância</th>
+       <th scope="col">Influência</th>
        <th scope="col">Cautela</th>
        <th scope="col">Estabilidade</th>
+       <th scope="col">Perfil Dominante</th>
        </tr>
     </thead>
     <tbody>
@@ -18,6 +19,7 @@
             <td>{{ resultado.influencia|floatformat:1 }}%</td>
             <td>{{ resultado.cautela|floatformat:1 }}%</td>
             <td>{{ resultado.estabilidade|floatformat:1 }}%</td>
+            <td id="resulpredomi">{{ resultado.perfildominante }}</td>
         </tr>
     {% endfor %}
     </tbody>

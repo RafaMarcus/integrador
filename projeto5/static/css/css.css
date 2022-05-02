@@ -20,6 +20,10 @@ img{
     margin-left: 33%;
 }
 
+h4{
+    margin-left: 33%;
+}
+
 #cabform{
     padding-bottom: 25px;
 }
@@ -30,4 +34,39 @@ img{
 
 .form-check{
     size: 50px;
+}
+
+h3{
+color: #EB0045;
+}
+
+#result_wrapper{
+    margin-top: 25px;
+}
+
+P{
+    font-size: medium;
+}
+
+#enun{
+    border-color: #EB0045;
+    border-style:groove;
+    margin-top: 30px;
+}
+
+#emprego{
+    margin-top:25px
+}
+
+#empregado{
+    margin-top: -15px;
+}
+
+#resulpredomi{
+   text-transform:capitalize;
+   font-weight: bold
+}
+#obrigado {
+    text-align: center;
+    margin-top: 100px;
 }

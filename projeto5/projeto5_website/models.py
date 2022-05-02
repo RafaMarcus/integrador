@@ -9,9 +9,10 @@ class Turma(models.Model):
 
 
 class Aluno(models.Model):
-  nome = models.CharField(max_length=30)
+  nome = models.CharField(max_length=50)
   ra = models.IntegerField(unique=True, blank=False)
   email = models.EmailField(max_length=254, blank=False)
+  empregado = models.BooleanField(default=False)
   #turma = models.ManyToManyField(Turma)
   def __str__(self):
     return str(self.ra)
@@ -25,13 +26,14 @@ class Resultado(models.Model):
   dominancia = models.FloatField()
   cautela = models.FloatField()
   estabilidade = models.FloatField()
+  perfildominante = models.CharField(max_length=50, default="")
 
   def __str__(self):
     return ' - '.join([str(self.aluno.ra),self.data_fim.isoformat()])
 
 
 class Teste(models.Model):
-  nome = models.CharField(max_length=30)
+  nome = models.CharField(max_length=50)
 
   def __str__(self):
     return self.nome
@@ -51,7 +53,7 @@ CHOICES_ALTERNATIVA = (
 )
 class Alternativa(models.Model):
   pergunta = models.ForeignKey(Pergunta, on_delete=models.CASCADE)
-  conteudo = models.CharField(max_length=30, blank=False)
+  conteudo = models.CharField(max_length=50, blank=False)
   perfil = models.IntegerField(choices=CHOICES_ALTERNATIVA, blank=False)
   
   def __str__(self):
