@@ -98,3 +98,7 @@ def resultados(request):
 
   return render(request, "projeto5_website/resultados.html",
             {"resultados": Resultado.objects.all()})
+
+def obrigado(request):
+  return render(request, "projeto5_website/obrigado.html",
+            {"resultados": Resultado.objects.all()})
