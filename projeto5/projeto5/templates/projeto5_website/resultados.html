@@ -4,22 +4,22 @@
     <thead>
        <tr>
        <th scope="col">Nome</th>
+       <th scope="col">Perfil Dominante</th>
        <th scope="col">Dominância</th>
        <th scope="col">Influência</th>
        <th scope="col">Cautela</th>
        <th scope="col">Estabilidade</th>
-       <th scope="col">Perfil Dominante</th>
        </tr>
     </thead>
     <tbody>
     {% for resultado in resultados %}
         <tr>
             <td>{{ resultado.aluno.nome}}  </td>
-            <td>{{ resultado.dominancia|floatformat:1 }}%</td>
-            <td>{{ resultado.influencia|floatformat:1 }}%</td>
-            <td>{{ resultado.cautela|floatformat:1 }}%</td>
-            <td>{{ resultado.estabilidade|floatformat:1 }}%</td>
             <td id="resulpredomi">{{ resultado.perfildominante }}</td>
+            <td>{{ resultado.dominancia|floatformat:2 }}%</td>
+            <td>{{ resultado.influencia|floatformat:2 }}%</td>
+            <td>{{ resultado.cautela|floatformat:2 }}%</td>
+            <td>{{ resultado.estabilidade|floatformat:2 }}%</td>   
         </tr>
     {% endfor %}
     </tbody>
