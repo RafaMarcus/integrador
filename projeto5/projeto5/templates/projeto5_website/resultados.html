@@ -9,6 +9,7 @@
        <th scope="col">Influência</th>
        <th scope="col">Cautela</th>
        <th scope="col">Estabilidade</th>
+       <th scope="col">Empregado?</th>
        </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@
             <td>{{ resultado.influencia|floatformat:2 }}%</td>
             <td>{{ resultado.cautela|floatformat:2 }}%</td>
             <td>{{ resultado.estabilidade|floatformat:2 }}%</td>   
+            <td>{{ resultado.aluno.empregado}}</td> 
         </tr>
     {% endfor %}
     </tbody>
