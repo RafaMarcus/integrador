@@ -1,4 +1,4 @@
-form{
+#form-teste{
 background-color: #243746;
 color: rgb(255, 255, 255);
 padding-left: 250px;
@@ -81,4 +81,18 @@ P{
 
 #check{
     color: rgb(126, 212, 45);
+}
+
+.card-body{
+    background-color: #243746;
+}
+
+#loginname{
+    color: aliceblue;
+    font-size: 25px;
+}
+
+#botaologin{
+    background-color: #EA0D43;
+    border-color: #EA0D43;
 }
