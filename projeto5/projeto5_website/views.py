@@ -1,3 +1,4 @@
+from email import message
 import operator
 from turtle import title
 from django.shortcuts import render
@@ -8,7 +9,7 @@ from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_protect
-
+from django.contrib import messages
 # Create your views here.
 
 
@@ -39,6 +40,7 @@ def login_user(request):
             if user.is_active:
                 login(request, user)
                 return HttpResponseRedirect('/resultado/')
+                
     return render(request, 'projeto5_website/login.html')
 
 
