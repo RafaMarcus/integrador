@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 
 # Create your models here.
@@ -10,7 +11,7 @@ class Turma(models.Model):
 
 class Aluno(models.Model):
   nome = models.CharField(max_length=50)
-  ra = models.IntegerField(unique=True, blank=False)
+  ra = models.CharField(max_length=14)
   email = models.EmailField(max_length=254, blank=False)
   empregado = models.BooleanField(default=False)
   #turma = models.ManyToManyField(Turma)
@@ -61,3 +62,11 @@ class Alternativa(models.Model):
     return ' - '.join([self.conteudo, 
         self.pergunta.__str__()[:15]+'...',
         self.pergunta.teste.__str__()])
+
+class Link(models.Model):
+  id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+  expire_date = models.DateTimeField()
+
+  @property
+  def link(self):
+    return '{}/{}'.format('localhost:8000/teste', str(self.id))

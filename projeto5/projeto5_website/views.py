@@ -2,7 +2,7 @@ from email import message
 import operator
 from turtle import title
 from django.shortcuts import render
-from projeto5_website.models import Pergunta, Alternativa, Aluno, CHOICES_ALTERNATIVA, Resultado
+from projeto5_website.models import Pergunta, Alternativa, Aluno, CHOICES_ALTERNATIVA, Resultado, Link
 from django.http import HttpResponse, HttpResponseRedirect
 from projeto5_website.forms import PerguntaForm
 from datetime import datetime
@@ -10,8 +10,10 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_protect
 from django.contrib import messages
-# Create your views here.
+import pytz
 
+# Create your views here.
+utc=pytz.UTC
 
 def home(request):
   return render(request, "projeto5_website/teste/1.html", 
@@ -44,14 +46,21 @@ def login_user(request):
     return render(request, 'projeto5_website/login.html')
 
 
-def teste(request, teste):
+def teste(request, id):
   #TODO: Criar um dicionario de perguntas/alternativas
+  print(teste)
   perguntas_dict = {}
   if request.method == 'GET':
-    for pergunta in Pergunta.objects.filter(teste__id=teste):
+    
+    link = Link.objects.get(id=id)
+    if link.expire_date < datetime.now().replace(tzinfo=utc):
+      return render(request, 'disc_website/login.html')  
+  
+    for pergunta in Pergunta.objects.filter():
       perguntas_dict[pergunta.enunciado] = Alternativa.objects.filter(pergunta=pergunta)
     return render(request, "projeto5_website/teste.html",
               {"perguntas": perguntas_dict})
+    
   elif request.method == 'POST':
     print(request.POST)
     totalRespostas = 0
