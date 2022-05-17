@@ -1,5 +1,5 @@
 from django.contrib import admin
-from projeto5_website.models import Pergunta, Alternativa, Teste, Resultado, Aluno, Turma
+from projeto5_website.models import Pergunta, Alternativa, Teste, Resultado, Aluno, Turma, Link
 # Register your models here.
 
 class ResultadoAdmin(admin.ModelAdmin):
@@ -10,6 +10,10 @@ class ResultadoAdmin(admin.ModelAdmin):
 class AlunoAdmin(admin.ModelAdmin):
     list_display = ('ra', 'nome', 'email')
     search_fields = ('ra__icontains', 'nome__icontains')
+    
+class LinkAdmin(admin.ModelAdmin):
+    list_display = ('id', 'expire_date', 'link')
+   
 
 admin.site.register(Pergunta)
 admin.site.register(Alternativa)
@@ -17,3 +21,4 @@ admin.site.register(Teste)
 admin.site.register(Resultado, ResultadoAdmin)
 admin.site.register(Aluno, AlunoAdmin)
 admin.site.register(Turma)
+admin.site.register(Link, LinkAdmin)
