@@ -2,7 +2,7 @@ from email import message
 import operator
 from turtle import title
 from django.shortcuts import render
-from projeto5_website.models import Pergunta, Alternativa, Aluno, CHOICES_ALTERNATIVA, Resultado, Link
+from projeto5_website.models import Pergunta, Alternativa, Aluno, CHOICES_ALTERNATIVA, Resultado, Link, Instituicao
 from django.http import HttpResponse, HttpResponseRedirect
 from projeto5_website.forms import PerguntaForm
 from datetime import datetime
@@ -118,6 +118,10 @@ def teste(request, id):
     print(resultado.perfildominante)
     return render(request, "projeto5_website/teste.html",
               {"perguntas": perguntas_dict})
+  
+def instituicoes(request):
+  return render(request, "projeto5_website/teste.html",
+            {"instituicoes": Instituicao.objects.all()})
  
 @login_required   
 def resultados(request):
@@ -128,7 +132,8 @@ def resultados(request):
 
   return render(request, "projeto5_website/resultados.html",
             {"resultados": Resultado.objects.all()})
+  
 
 def obrigado(request):
   return render(request, "projeto5_website/obrigado.html",
-            {"resultados": Resultado.objects.all()})
+            {"obrigado": Resultado.objects.all()})
