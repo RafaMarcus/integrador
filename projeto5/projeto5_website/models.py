@@ -28,6 +28,7 @@ class Resultado(models.Model):
   cautela = models.FloatField()
   estabilidade = models.FloatField()
   perfildominante = models.CharField(max_length=50, default="")
+  
 
   def __str__(self):
     return ' - '.join([str(self.aluno.ra),self.data_fim.isoformat()])
@@ -70,3 +71,11 @@ class Link(models.Model):
   @property
   def link(self):
     return '{}/{}'.format('localhost:8000/teste', str(self.id))
+  
+class Instituicao(models.Model):
+  nome = models.CharField(max_length=100)
+  
+  
+  def __str__(self):
+    return self.nome
+  
