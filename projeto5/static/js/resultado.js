@@ -38,8 +38,13 @@ $(document).ready(function () {
                         $(api.column(colIdx).header()).index()
                     );
                     var title = $(cell).text();
-                    
-                    $(cell).html('<input type="text" placeholder="' + title + '" />');
+                    if(title == "Nome"){
+                        $(cell).html('<input type="text" style="width:200px" placeholder="' + title + '" />');
+                    }else if (title == "Perfil Dominante"){
+                        $(cell).html('<input type="text" style="width:150px" placeholder="' + title + '" />');
+                    }else if (title == "Empregado?"){
+                        $(cell).html('<input type="text" style="width:120px" placeholder="' + title + '" />');    
+                    }                   
  
                     // On every keypress in this input
                     $(

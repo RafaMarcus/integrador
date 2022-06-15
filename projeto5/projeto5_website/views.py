@@ -74,6 +74,7 @@ def teste(request, id):
     email = request.POST['email']
     nome =  request.POST['nome']
     empregado = 'empregadoOpcao' in request.POST
+    
       
     print (request.POST)
     for chave, conteudo in request.POST.items():

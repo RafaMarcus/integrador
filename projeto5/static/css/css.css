@@ -14,6 +14,7 @@ padding-left: 250px;
 #cabecalho{
     background-color: #243746;
     padding-bottom: 30px;
+    
 }
 
 img{
@@ -95,4 +96,9 @@ P{
 #botaologin{
     background-color: #EA0D43;
     border-color: #EA0D43;
+}
+
+.numero{
+    font-weight: bold;
+    font-size: small;
 }
