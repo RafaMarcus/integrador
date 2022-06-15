@@ -14,6 +14,7 @@ class Aluno(models.Model):
   ra = models.CharField(max_length=14)
   email = models.EmailField(max_length=254, blank=False)
   empregado = models.BooleanField(default=False)
+  
   #turma = models.ManyToManyField(Turma)
   def __str__(self):
     return str(self.ra)
