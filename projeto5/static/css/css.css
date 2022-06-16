@@ -1,4 +1,4 @@
-form{
+#form-teste{
 background-color: #243746;
 color: rgb(255, 255, 255);
 padding-left: 250px;
@@ -14,9 +14,14 @@ padding-left: 250px;
 #cabecalho{
     background-color: #243746;
     padding-bottom: 30px;
+    
 }
 
 img{
+    margin-left: 33%;
+}
+
+h4{
     margin-left: 33%;
 }
 
@@ -40,9 +45,60 @@ color: #EB0045;
     margin-top: 25px;
 }
 
-td:first-child + td + td + td + td + td { 
-     width: 10px;
-     text-align: center;
-     vertical-align: middle;
+P{
+    font-size: medium;
 }
 
+#enun{
+    border-color: #EB0045;
+    border-style:groove;
+    margin-top: 30px;
+}
+
+#emprego{
+    margin-top:25px
+}
+
+#empregado{
+    margin-top: -15px;
+}
+
+#resulpredomi{
+   text-transform:capitalize;
+   font-weight: bold
+}
+#obrigado {
+    text-align: center;
+    margin-top: 100px;
+    background-color:#243746 ;
+    height: 100%;
+    margin-top: 0px;
+}
+
+#textoobrigado{
+    padding-top: 100px;
+    color: aliceblue;
+}
+
+#check{
+    color: rgb(126, 212, 45);
+}
+
+.card-body{
+    background-color: #243746;
+}
+
+#loginname{
+    color: aliceblue;
+    font-size: 25px;
+}
+
+#botaologin{
+    background-color: #EA0D43;
+    border-color: #EA0D43;
+}
+
+.numero{
+    font-weight: bold;
+    font-size: small;
+}
